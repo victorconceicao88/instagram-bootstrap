@@ -1,74 +1,148 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap demo</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-  </head>
-  <body>
-      
-    <div class="container"> 
-                  <!-- Nav bar-->
-        <nav class="navbar bg-body-tertiary">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="#">
-                <i class="bi bi-instagram"></i>
-                VictorGram
-              </a>
-              <div class="d-flex"> <!-- will keep the buttons next to each other-->
-              <button type="button" class="btn btn-success">Create a New Post</i></button>
-              <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    <i class="bi bi-gear-fill"></i>
-                </button>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Profile</a></li>
-                  <li><a class="dropdown-item" href="#">Accessibility</a></li>
-                  <li><a class="dropdown-item" href="#">Privacy & Data</a></li>
-                  <li><hr class="dropdown-divider"></li> <!-- Will give space between buttons-->
-                  <li><a class="dropdown-item text-danger" href="#">Log Out</a></li>
-                </ul>
-               </div>
-              </div>
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- Nav bar-->
+ <nav class="navbar bg-body-tertiary">
+    
+    <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <i class="bi bi-instagram"></i>
+                    Victor´sGram
+                </a>
+                        <div class="d-flex my-5">
+                                <!-- Button trigger modal -->
+                                <button type="button" class="btn btn-success me-2" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal">
+                                    Create a new post
+                                </button>
+                                <div class="dropdown">
+                                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        <i class="bi bi-gear-fill"></i>
+                                    </button>
+                                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton1">
+                                        <li><a class="dropdown-item" href="#">Profile</a></li>
+                                        <li><a class="dropdown-item" href="#">Accesibility</a></li>
+                                        <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
+                                        <li>
+                                            <hr class="dropdown-divider">
+                                        </li>
+                                        <li><a class="dropdown-item text-danger" href="https://4geeks.com/">Log out</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                </nav>
+            
+ <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Create a new post</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-          </nav> <!-- End of Navbar-->
-        
-          
-          <!--Colums and row my-5 my-5s-->
-          <div class="container">                
-            <div class="row my-5">
-                <div class="col">           
-                  </div>
-                  <div class="col d-flex justify-content-center">
-                    <a href="index.html"><i class="bi bi-grid-3x2-gap-fill me-2"></i></a>
-                    <a href="view2.html"><i class="bi bi-square-fill"></i></a>
-                  </div>
-                  <div class="col">           
-                  </div>
+            <div class="modal-body">
+                <h6>Caption:</h6>
+                <textarea class="form-control" placeholder="Add the caption of your post here"
+                    id="floatingTextarea2"></textarea>
+                <div class="row p-2">
+                    <button class="col-1 border rounded p-1 m-1 btn-light">
+                        <i class="fa-solid fa-camera"></i>
+                    </button>
+                    <button class="col-1 border rounded p-1 m-1 btn-light">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </button>
+                </div>
             </div>
-            <div class="row my-5">
-                <div class="col">
-                  </div>
-                  <div class="col">
-                    <img src="https://placehold.co/400" alt="">
-                  </div>
-                  <div class="col">
-                  </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-success">Publish</button>
             </div>
-            <div class="row my-5">
-                <div class="col">
-                  </div>
-                  <div class="col">
-                    <img src="https://placehold.co/400" alt="">
-                  </div>
-                  <div class="col">
-                  </div>
-            </div>
-          </div>
+        </div>
     </div>
-   
-     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-  </body>
-</html>
+</div>
+ 
+        <!--Colums and row my-5-->
+        <div class="container text-center my-3">
+
+            <a href="index.html"><i class="bi bi-grid-3x3 me-5"></i></a> <!--me-5 will space the items-->
+            <a href="view2.html"><i class="bi bi-square-fill"></i></a>
+            
+            <!--First Photo-->
+            <div class="tab-pane fade show active overflow-hidden my-3" id="home" role="tabpanel" aria-labelledby="home-tab">
+                <div class="col-6 mx-auto border rounded p-0">
+                    <div class="d-flex p-2">
+                        <div class="w-100 fs-4 d-flex p-0">My Favorite Led Zeppelin Album!</div>
+                        <small class="align-bottom">08/1979</small>
+                    </div>                 
+                        <div class="col-4 p-10"><img src="https://discography.ledzeppelin.com/images/pg.jpg" width="634" height="400" alt=""></div>
+                         
+                       
+                        <div class="d-flex p-0"><p><strong>204 Likes</strong></p></div>
+                        <div class="d-flex p-0"><p>This is an example of a very good Album that you can post on instagram</p></div> 
+                    
+                      
+                  
+                        
+                </div>
+             </div> <!--End of first photo-->
+             
+             <!--Second Photo-->
+             <div class="tab-pane fade show active overflow-hidden my-3" id="home" role="tabpanel" aria-labelledby="home-tab">
+                <div class="col-6 mx-auto border rounded p-0">
+                    <div class="d-flex p-2">
+                        <div class="w-100 fs-4 d-flex p-0">My Favorite Miles Davies Album!</div>
+                        <small class="align-bottom">10/1975</small>
+                    </div>                 
+                        <div class="col-4 p-10"><img src="https://blog.psprint.com/sites/default/files/2010/11/miles_davis__bitches_brew_-800x800.jpg" width="634" height="400" alt=""></div>
+                         
+                       
+                        <div class="d-flex p-0"><p><strong>124543 Likes</strong></p></div>
+                        <div class="d-flex p-0"><p>This is an example of a very good Album that you can post on instagram</p></div> 
+                    
+                      
+                  
+                        
+                </div>
+             </div> <!--End Of second Photo-->
+
+            <!--Third Photo-->
+            <div class="tab-pane fade show active overflow-hidden my-3" id="home" role="tabpanel" aria-labelledby="home-tab">
+                <div class="col-6 mx-auto border rounded p-0">
+                    <div class="d-flex p-2">
+                        <div class="w-100 fs-4 d-flex p-0">My Favorite Meat Loaf Album!</div>
+                        <small class="align-bottom">01/1970</small>
+                    </div>                 
+                        <div class="col-4 p-10"><img src="https://img.huffingtonpost.com/asset/5a036ef71b00002700376370.jpg?ops=scalefit_720_noupscale" width="634" height="400" alt=""></div>
+                         
+                       
+                        <div class="d-flex p-0"><p><strong>983635237 Likes</strong></p></div>
+                        <div class="d-flex p-0"><p>This is an example of a very good Album that you can post on instagram</p></div> 
+                    
+                      
+                  
+                        
+                </div>
+             </div> <!--end of thrid Photo-->
+                
+            </div>
+            </div> <!--End of Colums and row my-5 -->
+    </div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+</body>
